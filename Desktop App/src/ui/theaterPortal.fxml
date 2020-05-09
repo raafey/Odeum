@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1131.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.TheaterPortalController">
+   <children>
+      <TabPane fx:id="tabPane" layoutX="8.0" layoutY="112.0" prefHeight="685.0" prefWidth="1116.0" stylesheets="@tab.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="homePane" onSelectionChanged="#homePaneSelected" text="Home">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="374.0" prefWidth="797.0">
+                     <children>
+                        <Label fx:id="theaterNameLabel" layoutX="451.0" layoutY="135.0" prefHeight="71.0" prefWidth="576.0">
+                           <font>
+                              <Font size="49.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="signoutButton" layoutX="478.0" layoutY="408.0" mnemonicParsing="false" onMouseClicked="#signoutButtonClicked" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: #CD6155;" text="Sign Out" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="createEventPane" onSelectionChanged="#createEventPaneSelected" text="Create New Event">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="646.0" prefWidth="1093.0">
+                     <children>
+                        <TextField fx:id="nameField" layoutX="131.0" layoutY="86.0" prefHeight="37.0" prefWidth="268.0" promptText="Event Name" style="-fx-border-color: #CD6155;" />
+                        <TextField fx:id="imageField" layoutX="131.0" layoutY="387.0" prefHeight="37.0" prefWidth="268.0" promptText="Image URL" style="-fx-border-color: #CD6155;" />
+                        <TextField fx:id="ratingField" layoutX="131.0" layoutY="159.0" prefHeight="37.0" prefWidth="268.0" promptText="Rating" style="-fx-border-color: #CD6155;" />
+                        <TextField fx:id="trailerField" layoutX="131.0" layoutY="312.0" prefHeight="37.0" prefWidth="268.0" promptText="Trailer URL" style="-fx-border-color: #CD6155;" />
+                        <ComboBox fx:id="genreComboBox" layoutX="131.0" layoutY="233.0" prefHeight="37.0" prefWidth="155.0" promptText="Genre" style="-fx-border-color: #CD6155;" />
+                        <TextArea fx:id="castField" layoutX="611.0" layoutY="85.0" prefHeight="149.0" prefWidth="430.0" promptText="Cast" style="-fx-border-color: #CD6155;" />
+                        <TextArea fx:id="synopsisField" layoutX="611.0" layoutY="283.0" prefHeight="149.0" prefWidth="430.0" promptText="Synopsis" style="-fx-border-color: #CD6155;" />
+                        <Button fx:id="saveButton" layoutX="477.0" layoutY="493.0" mnemonicParsing="false" onMouseClicked="#saveButtonClicked" prefHeight="39.0" prefWidth="111.0" style="-fx-background-color: #CD6155; -fx-font-size: 16 px;" text="Save" textFill="WHITE" />
+                        <Label fx:id="createLabel" layoutX="399.0" layoutY="580.0" prefHeight="26.0" prefWidth="351.0" textFill="RED">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="24.0" layoutY="92.0" text="Event Name">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="30.0" layoutY="318.0" text="Trailer URL">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="46.0" layoutY="239.0" text="Genre">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="45.0" layoutY="165.0" text="Rating">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="393.0" text="Image URL">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="543.0" layoutY="92.0" text="Cast">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="527.0" layoutY="300.0" text="Synopsis">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="manageEventPane" onSelectionChanged="#manageEventPaneSelected" text="Manage Events">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="refreshButton" layoutX="253.0" layoutY="575.0" mnemonicParsing="false" onMouseClicked="#refreshButtonClicked" style="-fx-background-color: #CD6155;" text="Refresh" textFill="WHITE" />
+                        <Label layoutX="100.0" layoutY="20.0" text="Current Events">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="eventDeleteButton" layoutX="149.0" layoutY="575.0" mnemonicParsing="false" onMouseClicked="#eventDeleteButtonClicked" prefHeight="31.0" prefWidth="70.0" style="-fx-background-color: #CD6155;" text="Delete" textFill="WHITE" />
+                        <Button fx:id="eventEditButton" layoutX="44.0" layoutY="575.0" mnemonicParsing="false" onMouseClicked="#eventEditButtonClicked" prefHeight="31.0" prefWidth="70.0" style="-fx-background-color: #CD6155;" text="Edit" textFill="WHITE" />
+                        <ListView fx:id="eventList" layoutX="44.0" layoutY="71.0" onMouseClicked="#eventListClicked" prefHeight="455.0" prefWidth="279.0" stylesheets="@table.css" />
+                        <ImageView fx:id="eventImage" fitHeight="295.0" fitWidth="256.0" layoutX="829.0" layoutY="58.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@Images/poster.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="eventRatingLabel" layoutX="385.0" layoutY="177.0" text="0.0">
+                           <font>
+                              <Font name="System Italic" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="eventNameLabel" layoutX="385.0" layoutY="89.0" prefHeight="43.0" prefWidth="428.0" text="Event Name">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="26.0" fitWidth="24.0" layoutX="427.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/star.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="eventGenreLabel" layoutX="385.0" layoutY="265.0" prefHeight="31.0" prefWidth="407.0" text="Genre">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="347.0" layoutY="27.0" orientation="VERTICAL" prefHeight="593.0" prefWidth="15.0" />
+                        <Label layoutX="639.0" layoutY="27.0" text="Event Details">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="eventSynopsisField" editable="false" layoutX="385.0" layoutY="382.0" prefHeight="224.0" prefWidth="700.0" style="-fx-background-color: #ffffff; -fx-border-color: #CD6155;" text="Synopsis">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextArea>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="manageSchPane" onSelectionChanged="#manageSchPaneSelected" text="Manage Schedules">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="scheduleTable" layoutX="347.0" layoutY="136.0" prefHeight="478.0" prefWidth="746.0" stylesheets="@table.css" />
+                        <Button fx:id="refereshButtonTwo" layoutX="1016.0" layoutY="82.0" mnemonicParsing="false" onMouseClicked="#refreshButtonTwoClicked" style="-fx-background-color: #CD6155;" text="Refresh" textFill="WHITE" />
+                        <Label layoutX="635.0" layoutY="31.0" text="Scheduled Events">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="85.0" layoutY="31.0" text="Create Schedule">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="eventBox" layoutX="85.0" layoutY="101.0" prefHeight="31.0" prefWidth="180.0" promptText="Events" />
+                        <DatePicker fx:id="datePicker" layoutX="85.0" layoutY="271.0" prefHeight="31.0" prefWidth="179.0" promptText="Date" />
+                        <ComboBox fx:id="hallBox" layoutX="85.0" layoutY="187.0" prefHeight="31.0" prefWidth="180.0" promptText="Hall" />
+                        <Label layoutX="37.0" layoutY="274.0" text="Date">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="warningLabel" layoutX="9.0" layoutY="589.0" prefHeight="25.0" prefWidth="309.0" textFill="RED">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="37.0" layoutY="363.0" text="Time">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="hoursBox" layoutX="85.0" layoutY="360.0" prefHeight="31.0" prefWidth="76.0" promptText="HH" />
+                        <ComboBox fx:id="minutesBox" layoutX="184.0" layoutY="360.0" prefHeight="31.0" prefWidth="81.0" promptText="MM" />
+                        <Button fx:id="saveButtonTwo" layoutX="129.0" layoutY="530.0" mnemonicParsing="false" onMouseClicked="#saveButtonTwoClicked" prefHeight="31.0" prefWidth="70.0" style="-fx-background-color: #CD6155;" text="Save" textFill="WHITE" />
+                        <Button fx:id="schDeleteButton" layoutX="912.0" layoutY="82.0" mnemonicParsing="false" onMouseClicked="#scheduleDeleteButtonClicked" prefHeight="31.0" prefWidth="70.0" style="-fx-background-color: #CD6155;" text="Delete" textFill="WHITE" />
+                        <Button fx:id="schEditButton" layoutX="347.0" layoutY="82.0" mnemonicParsing="false" onMouseClicked="#scheduleEditButtonClicked" prefHeight="31.0" prefWidth="70.0" style="-fx-background-color: #CD6155;" text="Edit" textFill="WHITE" />
+                        <Label layoutX="34.0" layoutY="104.0" text="Event">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="40.0" layoutY="190.0" text="Hall">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="316.0" layoutY="21.0" orientation="VERTICAL" prefHeight="604.0" prefWidth="14.0" />
+                        <Label layoutX="37.0" layoutY="453.0" text="Price" />
+                        <TextField fx:id="eventPriceField" layoutX="85.0" layoutY="448.0" prefHeight="31.0" prefWidth="180.0" promptText="Price in Rs." style="-fx-border-color: #CD6155;" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="manageSeatingPane" onSelectionChanged="#manageSeatingPaneSelected" text="Manage Seating Plans">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TilePane fx:id="tilePane" layoutX="317.0" layoutY="102.0" prefHeight="428.0" prefWidth="773.0" />
+                        <Separator layoutX="242.0" layoutY="17.0" orientation="VERTICAL" prefHeight="636.0" prefWidth="11.0" />
+                        <ComboBox fx:id="selectHallCombobox" layoutX="6.0" layoutY="69.0" prefHeight="31.0" prefWidth="143.0" promptText="Select Hall" />
+                        <Label layoutX="42.0" layoutY="143.0" text="Scheduled Events">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="625.0" layoutY="35.0" text="Seating Plan">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="43.0" fitWidth="43.0" layoutX="260.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/num_chars/one.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="43.0" fitWidth="43.0" layoutX="260.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/num_chars/two.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="43.0" fitWidth="43.0" layoutX="260.0" layoutY="268.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/num_chars/three.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="43.0" fitWidth="43.0" layoutX="260.0" layoutY="322.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/num_chars/four.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="43.0" fitWidth="43.0" layoutX="260.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/num_chars/five.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="43.0" fitWidth="43.0" layoutX="260.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/num_chars/six.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="43.0" fitWidth="43.0" layoutX="260.0" layoutY="482.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/num_chars/seven.png" />
+                           </image>
+                        </ImageView>
+                        <ComboBox fx:id="seatRowBox" layoutX="399.0" layoutY="568.0" prefHeight="31.0" prefWidth="88.0" promptText="Row" />
+                        <ComboBox fx:id="seatColBox" layoutX="514.0" layoutY="568.0" prefHeight="31.0" prefWidth="106.0" promptText="Column" />
+                        <Label layoutX="331.0" layoutY="571.0" text="Seat ID">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="releaseSeatButton" layoutX="970.0" layoutY="570.0" mnemonicParsing="false" onMouseClicked="#releaseSeatButtonClicked" style="-fx-background-color: #CD6155;" text="Release" textFill="WHITE" />
+                        <Button fx:id="viewSeatButton" layoutX="788.0" layoutY="570.0" mnemonicParsing="false" onMouseClicked="#viewSeatButtonClicked" prefHeight="31.0" prefWidth="71.0" style="-fx-background-color: #CD6155;" text="View" textFill="WHITE" />
+                        <Button fx:id="bookSeatButton" layoutX="879.0" layoutY="570.0" mnemonicParsing="false" onMouseClicked="#bookSeatButtonClicked" prefHeight="31.0" prefWidth="71.0" style="-fx-background-color: #CD6155;" text="Book" textFill="WHITE" />
+                        <Button fx:id="loadHallButton" layoutX="177.0" layoutY="69.0" mnemonicParsing="false" onMouseClicked="#loadHallButtonClicked" prefHeight="31.0" prefWidth="54.0" style="-fx-background-color: #CD6155;" text="Load" textFill="WHITE" />
+                        <TableView fx:id="schEventTable" layoutX="3.0" layoutY="190.0" onMouseClicked="#schEventTableClicked" prefHeight="458.0" prefWidth="235.0" stylesheets="@table.css" />
+                        <Button fx:id="seatRefreshButton" layoutX="1019.0" layoutY="37.0" mnemonicParsing="false" onMouseClicked="#seatRefreshButtonClicked" prefHeight="31.0" prefWidth="71.0" style="-fx-background-color: #CD6155;" text="Refresh" textFill="WHITE" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <ImageView fitHeight="112.0" fitWidth="292.0" layoutX="830.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Odeum.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tabIcon" fitHeight="88.0" fitWidth="100.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/cinema.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="795.0" prefWidth="1302.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.AdminPortalController">
+   <children>
+      <TableView fx:id="table" editable="true" layoutX="266.0" layoutY="49.0" prefHeight="690.0" prefWidth="995.0" stylesheets="@table.css" />
+      <ImageView fitHeight="111.0" fitWidth="244.0" layoutX="11.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Odeum.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="159.0" fitWidth="178.0" layoutX="53.0" layoutY="548.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Alduin.png" />
+         </image>
+      </ImageView>
+      <RadioButton fx:id="radioUser" layoutX="44.0" layoutY="318.0" mnemonicParsing="false" onMouseClicked="#userClicked" text="Registered Users">
+         <toggleGroup>
+            <ToggleGroup fx:id="userType" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="radioTheater" layoutX="44.0" layoutY="398.0" mnemonicParsing="false" onMouseClicked="#theaterClicked" text="Registered Theaters" toggleGroup="$userType" />
+      <Separator layoutX="33.0" layoutY="265.0" prefWidth="200.0" />
+      <Separator layoutX="37.0" layoutY="479.0" prefWidth="200.0" />
+      <Label layoutX="59.0" layoutY="217.0" text="Select User View">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

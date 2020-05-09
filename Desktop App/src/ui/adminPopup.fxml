@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="537.0" prefWidth="428.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.AdminPanelPopupController">
+   <children>
+      <Button fx:id="manageUserButton" layoutX="149.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#manageUserButtonClicked" prefHeight="31.0" prefWidth="130.0" style="-fx-background-color: #CD6155;" text="Manage Users" textFill="WHITE" />
+      <Button fx:id="manageTriviaButton" layoutX="149.0" layoutY="288.0" mnemonicParsing="false" onMouseClicked="#manageTriviaButtonClicked" prefHeight="31.0" prefWidth="130.0" style="-fx-background-color: #CD6155;" text="Manage Trivias" textFill="WHITE" />
+      <Button fx:id="manageArticleButton" layoutX="149.0" layoutY="403.0" mnemonicParsing="false" onMouseClicked="#manageArticleButtonClicked" prefHeight="31.0" prefWidth="130.0" style="-fx-background-color: #CD6155;" text="Manage Articles" textFill="WHITE" />
+      <ImageView fitHeight="101.0" fitWidth="100.0" layoutX="304.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/gears.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="44.0" layoutY="45.0" text="Admin Panel">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

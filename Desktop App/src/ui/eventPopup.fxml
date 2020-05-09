@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="577.0" prefWidth="872.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.EventPopupController">
+   <children>
+      <ImageView fx:id="poster" fitHeight="210.0" fitWidth="207.0" layoutX="621.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="titleField" layoutX="29.0" layoutY="51.0" prefHeight="43.0" prefWidth="477.0" text="Event Title">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="ratingField" layoutX="29.0" layoutY="124.0" prefHeight="32.0" prefWidth="109.0" text="Rating">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="genreField" layoutX="29.0" layoutY="184.0" prefHeight="27.0" prefWidth="199.0" text="Genre">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="synopsisField" editable="false" layoutX="29.0" layoutY="296.0" prefHeight="243.0" prefWidth="815.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextArea>
+      <MediaView fitHeight="200.0" fitWidth="200.0" layoutX="625.0" layoutY="51.0" preserveRatio="false" />
+      <Label layoutX="29.0" layoutY="235.0" prefHeight="21.0" prefWidth="94.0" text="Synopsis">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

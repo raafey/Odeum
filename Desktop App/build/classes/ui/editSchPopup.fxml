@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="728.0" prefWidth="409.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.EditSchPopupController">
+   <children>
+      <ComboBox fx:id="eventBox" layoutX="117.0" layoutY="89.0" prefHeight="31.0" prefWidth="194.0" promptText="Events" />
+      <DatePicker fx:id="datePicker" layoutX="113.0" layoutY="309.0" prefHeight="31.0" prefWidth="194.0" />
+      <ComboBox fx:id="hallBox" layoutX="113.0" layoutY="200.0" prefHeight="31.0" prefWidth="194.0" promptText="Hall" />
+      <ComboBox fx:id="hoursBox" layoutX="113.0" layoutY="419.0" prefHeight="31.0" prefWidth="76.0" promptText="HH" />
+      <ComboBox fx:id="minutesBox" layoutX="230.0" layoutY="419.0" prefHeight="31.0" prefWidth="81.0" promptText="MM" />
+      <Button fx:id="saveButton" layoutX="170.0" layoutY="604.0" mnemonicParsing="false" onMouseClicked="#saveButtonClicked" prefHeight="31.0" prefWidth="70.0" style="-fx-background-color: #CD6155;" text="Save" textFill="WHITE" />
+      <Label fx:id="warningLabel" layoutX="15.0" layoutY="668.0" prefHeight="21.0" prefWidth="372.0" textFill="RED" />
+      <Label layoutX="58.0" layoutY="312.0" text="Date">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="422.0" text="Time">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="203.0" text="Hall">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="92.0" text="Event">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="529.0" text="Price" />
+      <TextField fx:id="eventPriceField" layoutX="113.0" layoutY="523.0" prefHeight="33.0" prefWidth="194.0" promptText="Price in Rs." style="-fx-border-color: #CD6155;" />
+   </children>
+</Pane>

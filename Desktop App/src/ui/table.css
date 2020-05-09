@@ -1,0 +1,12 @@
+.table-view {
+    -fx-selection-bar:  salmon;
+    -fx-selection-bar-non-focused: rgb(253, 186, 179);
+    -fx-focus-color: red;
+}
+
+.list-view {
+    -fx-selection-bar: salmon;
+    -fx-selection-bar-non-focused:rgb(253, 186, 179);
+    -fx-focus-color: red;   
+}
+

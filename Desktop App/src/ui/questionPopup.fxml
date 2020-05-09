@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="940.0" prefWidth="914.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.QuestionPopupController">
+   <children>
+      <Label layoutX="58.0" layoutY="31.0" text="Add Question">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="147.0" fitWidth="156.0" layoutX="714.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/question.png" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="questionField" layoutX="58.0" layoutY="200.0" prefHeight="125.0" prefWidth="803.0" promptText="Enter Question Here..." />
+      <Label layoutX="58.0" layoutY="151.0" text="Question">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="aField" layoutX="58.0" layoutY="412.0" prefHeight="125.0" prefWidth="376.0" promptText="Enter Option A Here..." />
+      <Label layoutX="58.0" layoutY="363.0" text="Option A">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="bField" layoutX="488.0" layoutY="412.0" prefHeight="125.0" prefWidth="376.0" promptText="Enter Option B Here..." />
+      <Label layoutX="488.0" layoutY="363.0" text="Option B">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="cField" layoutX="58.0" layoutY="647.0" prefHeight="125.0" prefWidth="376.0" promptText="Enter Option C Here..." />
+      <Label layoutX="58.0" layoutY="598.0" text="Option C">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="dField" layoutX="488.0" layoutY="647.0" prefHeight="125.0" prefWidth="376.0" promptText="Enter Option D Here..." />
+      <Label layoutX="488.0" layoutY="598.0" text="Option D">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="optBox" layoutX="178.0" layoutY="836.0" prefWidth="150.0" promptText="Option" />
+      <Label layoutX="58.0" layoutY="841.0" text="Correct Option" />
+      <Button fx:id="nextButton" layoutX="762.0" layoutY="836.0" mnemonicParsing="false" onMouseClicked="#nextButtonClicked" prefHeight="31.0" prefWidth="99.0" style="-fx-background-color: #CD6155;" text="Next" textFill="WHITE" />
+      <Label fx:id="qnumLabel" layoutX="58.0" layoutY="85.0" prefHeight="48.0" prefWidth="99.0" text="Q: ">
+         <font>
+            <Font name="System Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="138.0" layoutY="358.0" text="*" textFill="RED">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="157.0" layoutY="833.0" prefHeight="21.0" prefWidth="11.0" text="*" textFill="RED">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="565.0" layoutY="358.0" text="*" textFill="RED">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="138.0" layoutY="146.0" text="*" textFill="RED">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

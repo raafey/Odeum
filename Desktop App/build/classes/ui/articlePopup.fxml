@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="603.0" prefWidth="794.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.ArticlePopupController">
+   <children>
+      <Label layoutX="532.0" layoutY="47.0" text="View Articles">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="152.0" layoutY="47.0" text="Add Article">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Separator layoutX="374.0" layoutY="47.0" orientation="VERTICAL" prefHeight="534.0" prefWidth="0.0" />
+      <Button fx:id="addButton" layoutX="164.0" layoutY="375.0" mnemonicParsing="false" onMouseClicked="#addButtonClicked" prefHeight="31.0" prefWidth="79.0" style="-fx-background-color: #CD6155;" text="Add" textFill="WHITE" />
+      <TextField fx:id="linkField" layoutX="105.0" layoutY="221.0" prefHeight="31.0" prefWidth="234.0" promptText="Enter Article Link" style="-fx-border-color: #CD6155;" />
+      <Label layoutX="45.0" layoutY="224.0" text="Article">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="refreshButton" layoutX="691.0" layoutY="78.0" mnemonicParsing="false" onMouseClicked="#refreshButtonClicked" style="-fx-background-color: #CD6155;" text="Refresh" textFill="WHITE" />
+      <ListView fx:id="linkList" layoutX="420.0" layoutY="121.0" prefHeight="452.0" prefWidth="341.0" stylesheets="@table.css" />
+      <Button fx:id="viewButton" layoutX="420.0" layoutY="78.0" mnemonicParsing="false" onMouseClicked="#ViewButtonClicked" style="-fx-background-color: #CD6155;" stylesheets="@table.css" text="View" textFill="WHITE" />
+   </children>
+</Pane>

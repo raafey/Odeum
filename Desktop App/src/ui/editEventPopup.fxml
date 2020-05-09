@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="1020.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.EditEventPopupController">
+   <children>
+      <TextField fx:id="nameField" layoutX="126.0" layoutY="94.0" prefHeight="37.0" prefWidth="268.0" promptText="Event Name" style="-fx-border-color: #CD6155;" />
+      <TextField fx:id="imageField" layoutX="126.0" layoutY="395.0" prefHeight="37.0" prefWidth="268.0" promptText="ImageURL" style="-fx-border-color: #CD6155;" />
+      <TextField fx:id="ratingField" layoutX="126.0" layoutY="170.0" prefHeight="37.0" prefWidth="268.0" promptText="Rating" style="-fx-border-color: #CD6155;" />
+      <TextField fx:id="trailerField" layoutX="126.0" layoutY="320.0" prefHeight="37.0" prefWidth="268.0" promptText="Trailer URL" style="-fx-border-color: #CD6155;" />
+      <ComboBox fx:id="genreComboBox" layoutX="126.0" layoutY="244.0" prefHeight="37.0" prefWidth="155.0" promptText="Genre" style="-fx-border-color: #CD6155;" />
+      <TextArea fx:id="castField" layoutX="601.0" layoutY="94.0" prefHeight="149.0" prefWidth="388.0" promptText="Cast" style="-fx-border-color: #CD6155;" />
+      <TextArea fx:id="synopsisField" layoutX="601.0" layoutY="283.0" prefHeight="149.0" prefWidth="388.0" promptText="Synopsis" style="-fx-border-color: #CD6155;" />
+      <Button fx:id="saveButton" layoutX="205.0" layoutY="503.0" mnemonicParsing="false" onMouseClicked="#saveButtonClicked" prefHeight="39.0" prefWidth="111.0" style="-fx-background-color: #CD6155; -fx-font-size: 16 px;" text="Save" textFill="WHITE" />
+      <Label layoutX="25.0" layoutY="102.0" text="Event Name">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="250.0" text="Genre">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="176.0" text="Rating">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="326.0" text="Trailer URL">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="401.0" text="Image URL">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="524.0" layoutY="102.0" text="Cast">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="508.0" layoutY="289.0" text="Synopsis">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="createLabel" layoutX="524.0" layoutY="510.0" prefHeight="26.0" prefWidth="351.0" textFill="RED">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

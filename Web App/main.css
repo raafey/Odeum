@@ -1,0 +1,206 @@
+body {
+    font-family: Helvetica;
+    font-size: 95%;
+    min-width: 1200px;
+    background-image: url("Images/Background2.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+br {
+    line-height: 200%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+.loginbox {
+    background-image: url("Images/LoginBox.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 100% 50%;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    top: 20px;
+    margin: auto;
+    background-color: rgb(242, 230, 230);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    .loginbox form {
+        width: 270px;
+        position: absolute;
+        top: 25%;
+        right: 80px;
+        padding: 20px;
+        border-radius: 20px;
+        /*background-color: rgb(237, 239, 242);*/
+        /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 3;*/
+    }
+
+    .loginbox strong {
+        color: rgb(112, 0, 6);
+    }
+
+.signup a {
+    position: absolute;
+    top: 45px;
+    right: 24.4%;
+    color: rgb(112, 0, 6);
+    background-color: rgb(242, 230, 230);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 2px solid rgb(112, 0, 6);
+    border-radius: 4px;
+    z-index: 3;
+}
+
+.logout a:hover {
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.logout a {
+    position: absolute;
+    top: 45px;
+    right: 86.6%;
+    color: rgb(112, 0, 6);
+    background-color: rgb(242, 230, 230);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 2px solid rgb(112, 0, 6);
+    border-radius: 4px;
+    z-index: 3;
+}
+
+.signup a:hover {
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+input {
+    width: 98%;
+    padding: 3px;
+    border: 2px solid rgb(112, 0, 6);
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.submitbutton {
+    width: 50%;
+    border: 2px solid rgb(112, 0, 6);
+    border-radius: 4px;
+    background-color: rgb(242, 230, 230);
+    color: rgb(112, 0, 6);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.logo {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.logo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float: right;
+    width: 250px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float: right;
+    width: 250px;
+}
+
+.welcome {
+    position: relative;
+    width: 50%;
+    height: 450px;
+    top: 20px;
+    margin: auto;
+    background-color: rgb(242, 230, 230);
+    text-align: center;
+    color: rgb(64, 66, 65);
+    border-radius: 50px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    .welcome img {
+        width: 30%;
+        margin: auto;
+    }
+
+    .welcome h1 {
+        font-size: 40px;
+        width: 100%;
+        font-style: italic;
+        text-shadow: 5px 5px 16px rgba(0,0,0,0.2);
+        z-index: 2;
+    }
+
+.load {
+    position: relative;
+    top: 20px;
+    left: 42.5%;
+    border: 16px solid rgb(242, 230, 230);
+    border-radius: 50%;
+    border-top: 12px solid rgb(115, 43, 44);
+    border-bottom: 12px solid rgb(115, 43, 44);
+    width: 100px;
+    height: 100px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.slideshow {
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    left: 20%;
+    width: 400px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}

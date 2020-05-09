@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="345.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.ViewSeatPopupController">
+   <children>
+      <ImageView fitHeight="113.0" fitWidth="101.0" layoutX="452.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/armchair.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="57.0" layoutY="48.0" text="Seat Details">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="hallLabel" layoutX="57.0" layoutY="120.0" text="Hall: ">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="locationLabel" layoutX="57.0" layoutY="168.0" text="Location: ">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="statusLabel" layoutX="57.0" layoutY="218.0" text="Status: ">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="userLabel" layoutX="57.0" layoutY="268.0" text="User ID: ">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
