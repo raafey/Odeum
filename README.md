@@ -6,7 +6,7 @@ Odeum provides a web interface for users to browse movies, post reviews, partici
 The desktop app provides a user-friendly interface for cinemas to manage bookings and scheduling movies in cinema halls.
 
 ## Web App
-[Web Home](Images/web_home.png)
+![Web Home](Images/web_home.png)
 
 ## Desktop App
-[Desktop App](Images/desktop.png)
+![Desktop App](Images/desktop.png)
